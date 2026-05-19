@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">中山市老渔夫电器有限公司 - 专业变频水泵/造浪泵/宠物水泵 B2B批发</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2a4f7a;
+            --accent: #2196F3;
+            --accent-hover: #1976D2;
+            --bg: #f5f7fa;
+            --card-bg: #ffffff;
+            --text: #333333;
+            --text-light: #666666;
+            --border: #e0e6ed;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header-top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .logo img { height: 44px; width: auto; border-radius: 8px; object-fit: cover; background: white; }
+        .logo-text h1 { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+        .logo-text p { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+
+        .search-box { flex: 1; max-width: 500px; position: relative; }
+        .search-box input {
+            width: 100%; padding: 12px 45px 12px 18px; border: none; border-radius: 25px;
+            font-size: 14px; background: rgba(255,255,255,0.15); color: white; outline: none; transition: all 0.3s;
+        }
+        .search-box input::placeholder { color: rgba(255,255,255,0.6); }
+        .search-box input:focus { background: rgba(255,255,255,0.25); }
+        .search-box i { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.7); }
+
+        .header-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+        .header-contact a {
+            color: white; text-decoration: none; display: flex; align-items: center; gap: 6px;
+            padding: 8px 14px; background: rgba(255,255,255,0.1); border-radius: 20px; transition: all 0.3s;
+            font-size: 13px;
+        }
+        .header-contact a:hover { background: var(--accent); }
+        .lang-btn {
+            background: rgba(255,255,255,0.15); color: white; border: 1px solid rgba(255,255,255,0.3);
+            padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 700;
+            transition: all 0.3s; min-width: 50px;
+        }
+        .lang-btn:hover { background: var(--accent); border-color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0f2440 100%);
+            color: white; padding: 50px 20px 40px; text-align: center; position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px;
+            pointer-events: none;
+        }
+        .hero h2 { font-size: 34px; margin-bottom: 12px; font-weight: 700; position: relative; }
+        .hero .slogan {
+            display: inline-block; background: linear-gradient(90deg, #ffd700, #ffaa00);
+            color: #1a1a1a; padding: 8px 24px; border-radius: 30px; font-size: 18px; font-weight: 800;
+            margin: 10px 0 20px; position: relative; box-shadow: 0 4px 15px rgba(255,170,0,0.3);
+            animation: pulseSlogan 2s infinite;
+        }
+        @keyframes pulseSlogan {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 15px rgba(255,170,0,0.3); }
+            50% { transform: scale(1.02); box-shadow: 0 6px 25px rgba(255,170,0,0.5); }
+        }
+        .hero p { font-size: 15px; opacity: 0.85; max-width: 600px; margin: 0 auto 25px; position: relative; }
+        .badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; position: relative; }
+        .badge {
+            background: rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 20px;
+            font-size: 13px; border: 1px solid rgba(255,255,255,0.15);
+        }
+
+        /* Main Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        .section-title { text-align: center; margin-bottom: 35px; }
+        .section-title h3 { font-size: 28px; color: var(--primary); margin-bottom: 10px; }
+        .section-title p { color: var(--text-light); font-size: 14px; }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex; justify-content: center; gap: 12px; margin-bottom: 30px; flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 12px 28px; border: 2px solid var(--border); background: white; border-radius: 30px;
+            cursor: pointer; font-size: 14px; font-weight: 600; color: var(--text-light); transition: all 0.3s;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .tab-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .tab-btn.active { background: var(--accent); border-color: var(--accent); color: white; box-shadow: 0 4px 15px rgba(33,150,243,0.3); }
+
+        /* Size Table */
+        .size-table-wrap {
+            display: none; margin-bottom: 30px; background: white; border-radius: var(--radius);
+            padding: 20px; box-shadow: var(--shadow); border: 1px solid var(--border);
+        }
+        .size-table-wrap.show { display: block; }
+        .size-table-wrap h4 { font-size: 16px; color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .size-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .size-table th, .size-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        .size-table th { background: var(--bg); color: var(--primary); font-weight: 600; }
+        .size-table tr:last-child th, .size-table tr:last-child td { border-bottom: none; }
+        .size-badge {
+            display: inline-block; padding: 3px 10px; border-radius: 6px; font-weight: 700; font-size: 13px;
+        }
+
+        /* Product Grid */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+
+        .product-card {
+            background: var(--card-bg); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow); transition: all 0.3s; cursor: pointer; border: 1px solid var(--border);
+        }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
+        /* Carousel */
+        .carousel {
+            height: 220px; position: relative; overflow: hidden; background: #f0f2f5;
+        }
+        .carousel-track {
+            display: flex; height: 100%; transition: transform 0.3s ease;
+        }
+        .carousel-slide {
+            min-width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
+        }
+        .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
+        .carousel-dots {
+            position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+            display: flex; gap: 6px; z-index: 2;
+        }
+        .carousel-dot {
+            width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5);
+            cursor: pointer; transition: all 0.3s; border: none;
+        }
+        .carousel-dot.active { background: white; width: 20px; border-radius: 4px; }
+        .carousel-hint {
+            position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.4); color: white; font-size: 11px; padding: 2px 10px;
+            border-radius: 10px; opacity: 0.7; pointer-events: none;
+        }
+
+        .product-image {
+            height: 220px; display: flex; align-items: center; justify-content: center;
+            font-size: 80px; color: white; position: relative;
+        }
+        .product-image.wave { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .product-image.pump { background: linear-gradient(135deg, #2196F3 0%, #21CBF3 100%); }
+        .product-image.pet { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+
+        .product-tag {
+            position: absolute; top: 12px; left: 12px;
+            background: rgba(255,255,255,0.95); color: var(--primary);
+            padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: 700; z-index: 2;
+        }
+        .moq-tag {
+            position: absolute; top: 12px; right: 12px;
+            background: rgba(255,87,34,0.95); color: white;
+            padding: 4px 10px; border-radius: 15px; font-size: 11px; font-weight: 700; z-index: 2;
+        }
+
+        .product-body { padding: 20px; }
+        .product-model { font-size: 12px; color: var(--accent); font-weight: 700; margin-bottom: 4px; letter-spacing: 0.5px; }
+        .product-name { font-size: 17px; font-weight: 700; margin-bottom: 4px; color: var(--primary); }
+        .product-size-label {
+            font-size: 14px; font-weight: 700; margin-bottom: 8px;
+        }
+        .product-desc { font-size: 13px; color: var(--text-light); margin-bottom: 14px; line-height: 1.5; }
+        .product-params-preview { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+        .param-tag { background: var(--bg); padding: 4px 10px; border-radius: 6px; font-size: 12px; color: var(--text-light); }
+        .product-actions { display: flex; gap: 10px; }
+
+        .btn {
+            flex: 1; padding: 10px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600;
+            cursor: pointer; transition: all 0.3s; text-align: center; text-decoration: none;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-outline { background: white; color: var(--accent); border: 1.5px solid var(--accent); }
+        .btn-outline:hover { background: var(--accent); color: white; }
+
+        /* Modal */
+        .modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6); z-index: 200; justify-content: center; align-items: center;
+            padding: 20px; backdrop-filter: blur(4px);
+        }
+        .modal-overlay.active { display: flex; }
+        .modal {
+            background: white; border-radius: var(--radius); max-width: 720px; width: 100%;
+            max-height: 90vh; overflow-y: auto; position: relative; animation: modalIn 0.3s ease;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-close {
+            position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; border-radius: 50%;
+            background: var(--bg); border: none; cursor: pointer; font-size: 18px; color: var(--text-light);
+            display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s;
+        }
+        .modal-close:hover { background: #ff5252; color: white; }
+        .modal-header {
+            height: 280px; position: relative; overflow: hidden; background: #f0f2f5;
+        }
+        .modal-header .carousel { height: 100%; }
+        .modal-body { padding: 28px; }
+        .modal-model { font-size: 13px; color: var(--accent); font-weight: 700; margin-bottom: 5px; }
+        .modal-title { font-size: 22px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+        .modal-size { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+        .modal-desc { color: var(--text-light); font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
+        .params-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .params-table th, .params-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 14px; }
+        .params-table th { background: var(--bg); color: var(--primary); font-weight: 600; width: 35%; }
+        .params-table td { color: var(--text); }
+        .modal-actions { display: flex; gap: 12px; }
+        .modal-actions .btn { padding: 14px; font-size: 15px; }
+
+        /* WeChat QR Modal */
+        .qr-modal-body { text-align: center; padding: 40px 30px; }
+        .qr-modal-body img { width: 220px; height: 220px; border-radius: 12px; margin-bottom: 20px; object-fit: cover; border: 2px solid var(--border); }
+        .qr-modal-body h4 { font-size: 18px; color: var(--primary); margin-bottom: 10px; }
+        .qr-modal-body p { color: var(--text-light); font-size: 14px; }
+        .qr-notice {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3); color: #5d4037;
+            padding: 12px 20px; border-radius: 10px; font-size: 15px; font-weight: 700;
+            margin-top: 15px; display: inline-block; border: 1px solid #ffe082;
+            animation: qrPulse 2s infinite;
+        }
+        @keyframes qrPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+        }
+
+        /* Coming Soon Section */
+        .coming-soon-section { margin-top: 50px; }
+        .coming-soon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+        .coming-soon-card {
+            background: white; border-radius: var(--radius); padding: 30px; text-align: center;
+            border: 2px dashed var(--border); opacity: 0.7; filter: grayscale(0.8);
+            transition: all 0.3s;
+        }
+        .coming-soon-card:hover { opacity: 0.9; filter: grayscale(0.5); }
+        .coming-soon-card .emoji {
+            font-size: 60px; margin-bottom: 15px; display: block; filter: grayscale(1) opacity(0.5);
+        }
+        .coming-soon-card h4 { font-size: 18px; color: var(--text-light); margin-bottom: 8px; }
+        .coming-soon-card p { font-size: 13px; color: #999; }
+        .coming-soon-badge {
+            display: inline-block; background: #e0e0e0; color: #888; padding: 4px 14px;
+            border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white; padding: 60px 20px; margin-top: 60px;
+        }
+        .contact-container { max-width: 900px; margin: 0 auto; text-align: center; }
+        .contact-section h3 { font-size: 28px; margin-bottom: 10px; }
+        .contact-section > .contact-container > p { opacity: 0.85; margin-bottom: 35px; font-size: 15px; }
+        .contact-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .contact-card {
+            background: rgba(255,255,255,0.1); padding: 28px 20px; border-radius: var(--radius);
+            border: 1px solid rgba(255,255,255,0.15); transition: all 0.3s; cursor: pointer;
+        }
+        .contact-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-3px); }
+        .contact-card i { font-size: 32px; margin-bottom: 12px; display: block; }
+        .contact-card .label { font-size: 13px; opacity: 0.7; margin-bottom: 6px; }
+        .contact-card .value { font-size: 17px; font-weight: 700; word-break: break-all; }
+        .contact-note { background: rgba(255,255,255,0.1); padding: 18px; border-radius: var(--radius); font-size: 14px; line-height: 1.6; }
+        .contact-note i { color: #ffd700; margin-right: 6px; }
+
+        /* Footer */
+        .footer { background: #0a1929; color: rgba(255,255,255,0.5); text-align: center; padding: 25px 20px; font-size: 13px; }
+
+        /* No Results */
+        .no-results { text-align: center; padding: 60px 20px; color: var(--text-light); display: none; }
+        .no-results i { font-size: 48px; margin-bottom: 15px; opacity: 0.3; }
+        .no-results.show { display: block; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top { flex-wrap: wrap; }
+            .search-box { order: 3; max-width: 100%; width: 100%; }
+            .hero h2 { font-size: 24px; }
+            .hero .slogan { font-size: 15px; padding: 6px 18px; }
+            .product-grid { grid-template-columns: 1fr; }
+            .modal-actions { flex-direction: column; }
+            .size-table th, .size-table td { padding: 10px; font-size: 13px; }
+            .modal-header { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="images/logo.jpg" alt="Laoyufu">
+                <div class="logo-text">
+                    <h1 data-i18n="company_short">老渔夫电器</h1>
+                    <p data-i18n="company_full">中山市老渔夫电器有限公司</p>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" data-i18n-placeholder="search_placeholder" placeholder="搜索产品型号或名称...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="header-actions">
+                <div class="header-contact">
+                    <a href="#contact"><i class="fas fa-phone"></i> <span data-i18n="inquiry">询价</span></a>
+                </div>
+                <button class="lang-btn" id="langBtn">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2 data-i18n="hero_title">专业水族设备 · B2B 源头工厂</h2>
+        <div class="slogan" data-i18n="slogan">🔥 全产业链工厂，价格全球最低 🔥</div>
+        <p data-i18n="hero_desc">专注变频造浪泵、变频水泵、宠物水泵研发制造，支持 OEM/ODM 定制，批量批发，品质保障</p>
+        <div class="badges">
+            <span class="badge"><i class="fas fa-industry"></i> <span data-i18n="badge_factory">源头工厂</span></span>
+            <span class="badge"><i class="fas fa-tags"></i> <span data-i18n="badge_price">价格全球最低</span></span>
+            <span class="badge"><i class="fas fa-cogs"></i> <span data-i18n="badge_custom">支持定制</span></span>
+            <span class="badge"><i class="fas fa-shipping-fast"></i> <span data-i18n="badge_bulk">批量供货</span></span>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <div class="container">
+        <div class="section-title">
+            <h3 data-i18n="product_center">产品中心</h3>
+            <p data-i18n="product_subtitle">点击产品查看详细参数与实拍图，支持按分类筛选和搜索</p>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">
+                <i class="fas fa-th-large"></i> <span data-i18n="tab_all">全部产品</span>
+            </button>
+            <button class="tab-btn" data-category="wave-maker">
+                <i class="fas fa-water"></i> <span data-i18n="tab_wave">变频造浪泵</span>
+            </button>
+            <button class="tab-btn" data-category="water-pump">
+                <i class="fas fa-tint"></i> <span data-i18n="tab_pump">变频水泵</span>
+            </button>
+            <button class="tab-btn" data-category="pet-pump">
+                <i class="fas fa-paw"></i> <span data-i18n="tab_pet">宠物水泵</span>
+            </button>
+        </div>
+
+        <!-- 变频水泵尺寸对照表 -->
+        <div class="size-table-wrap" id="sizeTableWrap">
+            <h4><i class="fas fa-ruler-combined"></i> <span data-i18n="size_table_title">变频水泵外观尺寸对照表</span></h4>
+            <table class="size-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="size_col_level">尺寸级别</th>
+                        <th data-i18n="size_col_model">对应型号</th>
+                        <th data-i18n="size_col_dim">外观尺寸 (mm)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="size-badge" style="background:#ffebee;color:#c62828;" data-i18n="size_1_label">第一尺寸（小型）</span></td>
+                        <td>LY-1500 / LY-2500</td>
+                        <td style="color:#c62828;font-weight:700;">74 × 85 × 154 mm</td>
+                    </tr>
+                    <tr>
+                        <td><span class="size-badge" style="background:#e3f2fd;color:#1565c0;" data-i18n="size_2_label">第二尺寸（中型）</span></td>
+                        <td>LY-4000 / LY-6000</td>
+                        <td style="color:#1565c0;font-weight:700;">95 × 113 × 200 mm</td>
+                    </tr>
+                    <tr>
+                        <td><span class="size-badge" style="background:#e8f5e9;color:#2e7d32;" data-i18n="size_3_label">第三尺寸（大型）</span></td>
+                        <td>LY-8000 / LY-10000 / LY-12000</td>
+                        <td style="color:#2e7d32;font-weight:700;">110 × 127 × 230 mm</td>
+                    </tr>
+                    <tr>
+                        <td><span class="size-badge" style="background:#fff3e0;color:#ef6c00;" data-i18n="size_4_label">第四尺寸（超大型）</span></td>
+                        <td>LY-14000 / LY-16000</td>
+                        <td style="color:#ef6c00;font-weight:700;">130 × 155 × 281 mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search"></i>
+            <p data-i18n="no_results">未找到匹配的产品，请尝试其他关键词</p>
+        </div>
+
+        <!-- 即将推出 -->
+        <div class="coming-soon-section" id="comingSoon">
+            <div class="section-title">
+                <h3 data-i18n="coming_soon_title">即将推出</h3>
+                <p data-i18n="coming_soon_sub">更多水族设备正在研发中，敬请期待</p>
+            </div>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <span class="emoji">🔥</span>
+                    <h4 data-i18n="heater_name">水族加热棒</h4>
+                    <p data-i18n="heater_desc">精准控温 · 防爆设计 · 安全省电</p>
+                    <span class="coming-soon-badge" data-i18n="not_yet">还没推出</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header" id="modalHeader">
+                <div class="carousel" id="modalCarousel">
+                    <div class="carousel-track" id="modalCarouselTrack"></div>
+                    <div class="carousel-dots" id="modalCarouselDots"></div>
+                    <div class="carousel-hint" id="modalCarouselHint" style="display:none;">左右滑动切换</div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-model" id="modalModel"></div>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-size" id="modalSize"></div>
+                <div class="modal-desc" id="modalDesc"></div>
+                <table class="params-table">
+                    <tbody id="modalParams"></tbody>
+                </table>
+                <div class="modal-actions">
+                    <a href="#contact" class="btn btn-primary" id="inquiryBtn">
+                        <i class="fas fa-comment-dollar"></i> <span data-i18n="btn_inquiry">立即询价</span>
+                    </a>
+                    <button class="btn btn-outline" id="copyModelBtn">
+                        <i class="fas fa-copy"></i> <span data-i18n="btn_copy">复制型号</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WeChat QR Modal -->
+    <div class="modal-overlay" id="qrModalOverlay">
+        <div class="modal" style="max-width: 400px;">
+            <button class="modal-close" id="qrModalClose"><i class="fas fa-times"></i></button>
+            <div class="qr-modal-body">
+                <img src="images/wechat-qr.jpg" alt="WeChat QR">
+                <h4 data-i18n="qr_title">添加微信咨询</h4>
+                <p data-i18n="qr_subtitle">扫码添加微信，获取最新报价单</p>
+                <div class="qr-notice" data-i18n="qr_notice">⚠️ 请备注公司名称</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h3 data-i18n="contact_title">立即询价</h3>
+            <p data-i18n="contact_subtitle">欢迎批发商、品牌商、电商卖家洽谈合作，支持 OEM/ODM 定制</p>
+            <div class="contact-cards">
+                <div class="contact-card" id="wechatCard">
+                    <i class="fab fa-weixin"></i>
+                    <div class="label" data-i18n="label_wechat">微信咨询</div>
+                    <div class="value">LFY-Dianqi</div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="label" data-i18n="label_phone">业务电话</div>
+                    <div class="value">177-2426-2525</div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-user"></i>
+                    <div class="label" data-i18n="label_contact">业务经理</div>
+                    <div class="value" data-i18n="contact_name">吴立坤</div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="label" data-i18n="label_address">工厂地址</div>
+                    <div class="value" data-i18n="address">广东省中山市</div>
+                </div>
+            </div>
+            <div class="contact-note">
+                <i class="fas fa-lightbulb"></i>
+                <span data-i18n="contact_tip">添加微信时请注明"批发合作"，我们将第一时间为您提供产品报价单和最新产品目录。</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-i18n="footer">© 2025 中山市老渔夫电器有限公司 版权所有 | 专业水族设备制造工厂 | 全产业链工厂，价格全球最低</p>
+    </footer>
+
+    <script>
+        // ========== I18n ==========
+        let lang = 'zh';
+        const i18n = {
+            page_title: { zh: '中山市老渔夫电器有限公司 - 专业变频水泵/造浪泵/宠物水泵 B2B批发', en: 'Zhongshan Laoyufu Electric Co., Ltd. - Variable Frequency Water Pump/Wave Maker/Pet Pump B2B Wholesale' },
+            company_short: { zh: '老渔夫电器', en: 'Laoyufu Electric' },
+            company_full: { zh: '中山市老渔夫电器有限公司', en: 'Zhongshan Laoyufu Electric Co., Ltd.' },
+            search_placeholder: { zh: '搜索产品型号或名称...', en: 'Search model or name...' },
+            inquiry: { zh: '询价', en: 'Inquiry' },
+            hero_title: { zh: '专业水族设备 · B2B 源头工厂', en: 'Professional Aquarium Equipment · B2B Factory Direct' },
+            slogan: { zh: '🔥 全产业链工厂，价格全球最低 🔥', en: '🔥 Whole Industry Chain Factory, Lowest Price Globally 🔥' },
+            hero_desc: { zh: '专注变频造浪泵、变频水泵、宠物水泵研发制造，支持 OEM/ODM 定制，批量批发，品质保障', en: 'Focus on R&D and manufacturing of variable frequency wave makers, water pumps, and pet pumps. Support OEM/ODM, bulk wholesale, quality guaranteed.' },
+            badge_factory: { zh: '源头工厂', en: 'Factory Direct' },
+            badge_price: { zh: '价格全球最低', en: 'Lowest Price Globally' },
+            badge_custom: { zh: '支持定制', en: 'OEM/ODM' },
+            badge_bulk: { zh: '批量供货', en: 'Bulk Supply' },
+            product_center: { zh: '产品中心', en: 'Product Center' },
+            product_subtitle: { zh: '点击产品查看详细参数与实拍图，支持按分类筛选和搜索', en: 'Click product to view details and real photos. Support filtering and search.' },
+            tab_all: { zh: '全部产品', en: 'All Products' },
+            tab_wave: { zh: '变频造浪泵', en: 'Wave Maker' },
+            tab_pump: { zh: '变频水泵', en: 'Water Pump' },
+            tab_pet: { zh: '宠物水泵', en: 'Pet Pump' },
+            size_table_title: { zh: '变频水泵外观尺寸对照表', en: 'Water Pump Size Comparison Table' },
+            size_col_level: { zh: '尺寸级别', en: 'Size Level' },
+            size_col_model: { zh: '对应型号', en: 'Models' },
+            size_col_dim: { zh: '外观尺寸 (mm)', en: 'Dimensions (mm)' },
+            size_1_label: { zh: '第一尺寸（小型）', en: 'Size 1 (Small)' },
+            size_2_label: { zh: '第二尺寸（中型）', en: 'Size 2 (Medium)' },
+            size_3_label: { zh: '第三尺寸（大型）', en: 'Size 3 (Large)' },
+            size_4_label: { zh: '第四尺寸（超大型）', en: 'Size 4 (Extra Large)' },
+            no_results: { zh: '未找到匹配的产品，请尝试其他关键词', en: 'No matching products found. Try other keywords.' },
+            coming_soon_title: { zh: '即将推出', en: 'Coming Soon' },
+            coming_soon_sub: { zh: '更多水族设备正在研发中，敬请期待', en: 'More aquarium equipment under R&D, stay tuned.' },
+            heater_name: { zh: '水族加热棒', en: 'Aquarium Heater' },
+            heater_desc: { zh: '精准控温 · 防爆设计 · 安全省电', en: 'Precise temperature control · Explosion-proof · Safe & energy-saving' },
+            not_yet: { zh: '还没推出', en: 'Coming Soon' },
+            btn_view: { zh: '查看详情', en: 'View Details' },
+            btn_inquiry: { zh: '立即询价', en: 'Inquiry Now' },
+            btn_copy: { zh: '复制型号', en: 'Copy Model' },
+            copied: { zh: '已复制', en: 'Copied' },
+            qr_title: { zh: '添加微信咨询', en: 'Add WeChat' },
+            qr_subtitle: { zh: '扫码添加微信，获取最新报价单', en: 'Scan QR code to add WeChat for latest quotes' },
+            qr_notice: { zh: '⚠️ 请备注公司名称', en: '⚠️ Please mention your company name' },
+            contact_title: { zh: '立即询价', en: 'Contact Us' },
+            contact_subtitle: { zh: '欢迎批发商、品牌商、电商卖家洽谈合作，支持 OEM/ODM 定制', en: 'Welcome wholesalers, brand owners, and e-commerce sellers. Support OEM/ODM.' },
+            label_wechat: { zh: '微信咨询', en: 'WeChat' },
+            label_phone: { zh: '业务电话', en: 'Tel' },
+            label_contact: { zh: '业务经理', en: 'Contact' },
+            contact_name: { zh: '吴立坤', en: 'Wu Likun' },
+            label_address: { zh: '工厂地址', en: 'Address' },
+            address: { zh: '广东省中山市', en: 'Zhongshan, Guangdong' },
+            contact_tip: { zh: '添加微信时请注明"批发合作"，我们将第一时间为您提供产品报价单和最新产品目录。', en: 'Please mention "Wholesale" when adding WeChat. We will provide the latest price list and catalog ASAP.' },
+            footer: { zh: '© 2025 中山市老渔夫电器有限公司 版权所有 | 专业水族设备制造工厂 | 全产业链工厂，价格全球最低', en: '© 2025 Zhongshan Laoyufu Electric Co., Ltd. All Rights Reserved | Professional Aquarium Equipment Factory | Lowest Price Globally' },
+            moq: { zh: 'MOQ', en: 'MOQ' },
+            model: { zh: '型号', en: 'Model' },
+            power: { zh: '功率', en: 'Power' },
+            flow: { zh: '流量', en: 'Flow Rate' },
+            tank_size: { zh: '推荐缸体', en: 'Tank Size' },
+            voltage: { zh: '电压', en: 'Voltage' },
+            control: { zh: '控制方式', en: 'Control' },
+            magnetic: { zh: '磁吸厚度', en: 'Magnetic Thickness' },
+            dimensions: { zh: '尺寸', en: 'Dimensions' },
+            head: { zh: '扬程', en: 'Head' },
+            outer_size: { zh: '外观尺寸', en: 'Dimensions' },
+            size_category: { zh: '尺寸类别', en: 'Size Category' },
+            category: { zh: '产品类别', en: 'Category' },
+            applicable_voltage: { zh: '适用电压', en: 'Applicable Voltage' },
+            material: { zh: '产品材质', en: 'Material' },
+            application: { zh: '主要用途', en: 'Application' },
+            moq_label: { zh: '最小起订量', en: 'Min. Order Quantity' },
+            hint_swipe: { zh: '左右滑动切换', en: 'Swipe to switch' },
+            hint_single: { zh: '仅一张实拍图（划不动）', en: 'Only one photo' }
+        };
+
+        function t(key) {
+            return (i18n[key] && i18n[key][lang]) || key;
+        }
+
+        function updateStaticText() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (i18n[key]) el.textContent = i18n[key][lang];
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.dataset.i18nPlaceholder;
+                if (i18n[key]) el.placeholder = i18n[key][lang];
+            });
+            document.title = t('page_title');
+            document.getElementById('langBtn').textContent = lang === 'zh' ? 'EN' : '中';
+        }
+
+        // ========== Size Map ==========
+        const sizeMap = {
+            '第一尺寸': { size: '74 × 85 × 154 mm', color: '#c62828', bg: '#ffebee', label: t('size_1_label') },
+            '第二尺寸': { size: '95 × 113 × 200 mm', color: '#1565c0', bg: '#e3f2fd', label: t('size_2_label') },
+            '第三尺寸': { size: '110 × 127 × 230 mm', color: '#2e7d32', bg: '#e8f5e9', label: t('size_3_label') },
+            '第四尺寸': { size: '130 × 155 × 281 mm', color: '#ef6c00', bg: '#fff3e0', label: t('size_4_label') }
+        };
+
+        // ========== Product Data ==========
+        const products = [
+            {
+                id: 1, category: 'wave-maker', categoryName: '变频造浪泵', categoryNameEn: 'Wave Maker',
+                model: 'LYZ-010', name: 'LYZ-010 变频造浪泵', nameEn: 'LYZ-010 Wave Maker',
+                icon: 'fa-water', theme: 'wave', moq: 500,
+                desc: '适合 40-60cm 鱼缸，功率 4-10W 无极调节，磁吸安装厚度 ≤8mm，DC 24V 安全低压供电。',
+                descEn: 'Suitable for 40-60cm tanks. 4-10W stepless adjustment. Magnetic installation thickness ≤8mm. DC 24V safe low voltage.',
+                images: ['images/wave-010-1.jpg'],
+                params: {
+                    '型号': 'LYZ-010', '功率': '4-10W 调节', '流量': '1800-4000 L/H', '推荐缸体': '0.4-0.6m',
+                    '电压': 'DC 24V', '控制方式': '手动控制', '磁吸厚度': '≤8mm', '尺寸': '60×48mm'
+                },
+                paramsEn: {
+                    'Model': 'LYZ-010', 'Power': '4-10W Adjustable', 'Flow Rate': '1800-4000 L/H', 'Tank Size': '0.4-0.6m',
+                    'Voltage': 'DC 24V', 'Control': 'Manual', 'Magnetic Thickness': '≤8mm', 'Dimensions': '60×48mm'
+                }
+            },
+            {
+                id: 2, category: 'wave-maker', categoryName: '变频造浪泵', categoryNameEn: 'Wave Maker',
+                model: 'LYZ-020', name: 'LYZ-020 变频造浪泵', nameEn: 'LYZ-020 Wave Maker',
+                icon: 'fa-water', theme: 'wave', moq: 500,
+                desc: '适合 60-100cm 鱼缸，功率 8-20W 无极调节，磁吸安装厚度 ≤12mm，DC 24V 安全低压供电。',
+                descEn: 'Suitable for 60-100cm tanks. 8-20W stepless adjustment. Magnetic installation thickness ≤12mm. DC 24V safe low voltage.',
+                images: [],
+                params: {
+                    '型号': 'LYZ-020', '功率': '8-20W 调节', '流量': '3000-10000 L/H', '推荐缸体': '0.6-1.0m',
+                    '电压': 'DC 24V', '控制方式': '手动控制', '磁吸厚度': '≤12mm', '尺寸': '76×55mm'
+                },
+                paramsEn: {
+                    'Model': 'LYZ-020', 'Power': '8-20W Adjustable', 'Flow Rate': '3000-10000 L/H', 'Tank Size': '0.6-1.0m',
+                    'Voltage': 'DC 24V', 'Control': 'Manual', 'Magnetic Thickness': '≤12mm', 'Dimensions': '76×55mm'
+                }
+            },
+            {
+                id: 3, category: 'wave-maker', categoryName: '变频造浪泵', categoryNameEn: 'Wave Maker',
+                model: 'LYZ-030', name: 'LYZ-030 变频造浪泵', nameEn: 'LYZ-030 Wave Maker',
+                icon: 'fa-water', theme: 'wave', moq: 500,
+                desc: '适合 100-150cm 大型鱼缸，功率 10-30W 无极调节，磁吸安装厚度 ≤15mm，DC 24V 安全低压供电。',
+                descEn: 'Suitable for 100-150cm large tanks. 10-30W stepless adjustment. Magnetic installation thickness ≤15mm. DC 24V safe low voltage.',
+                images: ['images/wave-030-1.jpg', 'images/wave-030-2.jpg'],
+                params: {
+                    '型号': 'LYZ-030', '功率': '10-30W 调节', '流量': '5000-13000 L/H', '推荐缸体': '1.0-1.5m',
+                    '电压': 'DC 24V', '控制方式': '手动控制', '磁吸厚度': '≤15mm', '尺寸': '82×63mm'
+                },
+                paramsEn: {
+                    'Model': 'LYZ-030', 'Power': '10-30W Adjustable', 'Flow Rate': '5000-13000 L/H', 'Tank Size': '1.0-1.5m',
+                    'Voltage': 'DC 24V', 'Control': 'Manual', 'Magnetic Thickness': '≤15mm', 'Dimensions': '82×63mm'
+                }
+            },
+            {
+                id: 4, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-1500', name: 'LY-1500 变频水泵', nameEn: 'LY-1500 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第一尺寸', moq: 300,
+                desc: '小型变频水泵，12W 低功耗，适用于小型过滤系统、水循环场景。第一尺寸基础款。',
+                descEn: 'Small variable frequency water pump. 12W low power consumption. Suitable for small filtration systems and water circulation. Size 1 basic model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-1500', '电压': 'AC220-240V 50/60Hz', '功率': '12W', '扬程': '2.7米',
+                    '流量': '1500 L/H', '外观尺寸': '74×85×154mm', '尺寸类别': '第一尺寸（小型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-1500', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '12W', 'Head': '2.7m',
+                    'Flow Rate': '1500 L/H', 'Dimensions': '74×85×154mm', 'Size Category': 'Size 1 (Small)'
+                }
+            },
+            {
+                id: 5, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-2500', name: 'LY-2500 变频水泵', nameEn: 'LY-2500 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第一尺寸', moq: 300,
+                desc: '小型变频水泵，20W 功率，适用于中小型过滤系统。第一尺寸增强款。',
+                descEn: 'Small variable frequency water pump. 20W power. Suitable for small and medium filtration systems. Size 1 enhanced model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-2500', '电压': 'AC220-240V 50/60Hz', '功率': '20W', '扬程': '3.2米',
+                    '流量': '2500 L/H', '外观尺寸': '74×85×154mm', '尺寸类别': '第一尺寸（小型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-2500', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '20W', 'Head': '3.2m',
+                    'Flow Rate': '2500 L/H', 'Dimensions': '74×85×154mm', 'Size Category': 'Size 1 (Small)'
+                }
+            },
+            {
+                id: 6, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-4000', name: 'LY-4000 变频水泵', nameEn: 'LY-4000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第二尺寸', moq: 300,
+                desc: '中型变频水泵，30W 功率，适用于中型鱼缸过滤、水幕墙等。第二尺寸基础款。',
+                descEn: 'Medium variable frequency water pump. 30W power. Suitable for medium tank filtration and water curtains. Size 2 basic model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-4000', '电压': 'AC220-240V 50/60Hz', '功率': '30W', '扬程': '4米',
+                    '流量': '4000 L/H', '外观尺寸': '95×113×200mm', '尺寸类别': '第二尺寸（中型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-4000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '30W', 'Head': '4m',
+                    'Flow Rate': '4000 L/H', 'Dimensions': '95×113×200mm', 'Size Category': 'Size 2 (Medium)'
+                }
+            },
+            {
+                id: 7, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-6000', name: 'LY-6000 变频水泵', nameEn: 'LY-6000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第二尺寸', moq: 300,
+                desc: '中型变频水泵，40W 功率，适用于中大型过滤系统。第二尺寸增强款。',
+                descEn: 'Medium variable frequency water pump. 40W power. Suitable for medium and large filtration systems. Size 2 enhanced model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-6000', '电压': 'AC220-240V 50/60Hz', '功率': '40W', '扬程': '5米',
+                    '流量': '6000 L/H', '外观尺寸': '95×113×200mm', '尺寸类别': '第二尺寸（中型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-6000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '40W', 'Head': '5m',
+                    'Flow Rate': '6000 L/H', 'Dimensions': '95×113×200mm', 'Size Category': 'Size 2 (Medium)'
+                }
+            },
+            {
+                id: 8, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-8000', name: 'LY-8000 变频水泵', nameEn: 'LY-8000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第三尺寸', moq: 300,
+                desc: '大型变频水泵，50W 功率，适用于大型过滤系统、鱼池循环。第三尺寸基础款。',
+                descEn: 'Large variable frequency water pump. 50W power. Suitable for large filtration systems and pond circulation. Size 3 basic model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-8000', '电压': 'AC220-240V 50/60Hz', '功率': '50W', '扬程': '5.5米',
+                    '流量': '8000 L/H', '外观尺寸': '110×127×230mm', '尺寸类别': '第三尺寸（大型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-8000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '50W', 'Head': '5.5m',
+                    'Flow Rate': '8000 L/H', 'Dimensions': '110×127×230mm', 'Size Category': 'Size 3 (Large)'
+                }
+            },
+            {
+                id: 9, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-10000', name: 'LY-10000 变频水泵', nameEn: 'LY-10000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第三尺寸', moq: 300,
+                desc: '大型变频水泵，70W 功率，高扬程大流量，适用于大型水循环系统。第三尺寸款。',
+                descEn: 'Large variable frequency water pump. 70W power. High head and large flow. Suitable for large water circulation systems. Size 3 model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-10000', '电压': 'AC220-240V 50/60Hz', '功率': '70W', '扬程': '6米',
+                    '流量': '10000 L/H', '外观尺寸': '110×127×230mm', '尺寸类别': '第三尺寸（大型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-10000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '70W', 'Head': '6m',
+                    'Flow Rate': '10000 L/H', 'Dimensions': '110×127×230mm', 'Size Category': 'Size 3 (Large)'
+                }
+            },
+            {
+                id: 10, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-12000', name: 'LY-12000 变频水泵', nameEn: 'LY-12000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第三尺寸', moq: 300,
+                desc: '大型变频水泵，85W 功率，超高流量，适用于大型鱼池、水培系统。第三尺寸增强款。',
+                descEn: 'Large variable frequency water pump. 85W power. Ultra-high flow rate. Suitable for large ponds and hydroponic systems. Size 3 enhanced model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-12000', '电压': 'AC220-240V 50/60Hz', '功率': '85W', '扬程': '6.5米',
+                    '流量': '12000 L/H', '外观尺寸': '110×127×230mm', '尺寸类别': '第三尺寸（大型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-12000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '85W', 'Head': '6.5m',
+                    'Flow Rate': '12000 L/H', 'Dimensions': '110×127×230mm', 'Size Category': 'Size 3 (Large)'
+                }
+            },
+            {
+                id: 11, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-14000', name: 'LY-14000 变频水泵', nameEn: 'LY-14000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第四尺寸', moq: 300,
+                desc: '超大型变频水泵，100W 功率，工程级大流量，适用于大型鱼池、景观水循环。第四尺寸基础款。',
+                descEn: 'Extra-large variable frequency water pump. 100W power. Engineering-grade large flow. Suitable for large ponds and landscape water circulation. Size 4 basic model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-14000', '电压': 'AC220-240V 50/60Hz', '功率': '100W', '扬程': '7米',
+                    '流量': '14000 L/H', '外观尺寸': '130×155×281mm', '尺寸类别': '第四尺寸（超大型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-14000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '100W', 'Head': '7m',
+                    'Flow Rate': '14000 L/H', 'Dimensions': '130×155×281mm', 'Size Category': 'Size 4 (Extra Large)'
+                }
+            },
+            {
+                id: 12, category: 'water-pump', categoryName: '变频水泵', categoryNameEn: 'Water Pump',
+                model: 'LY-16000', name: 'LY-16000 变频水泵', nameEn: 'LY-16000 Water Pump',
+                icon: 'fa-tint', theme: 'pump', sizeKey: '第四尺寸', moq: 300,
+                desc: '超大型变频水泵，120W 功率，旗舰级流量表现，适用于大型景观工程、养殖循环系统。第四尺寸旗舰款。',
+                descEn: 'Extra-large variable frequency water pump. 120W power. Flagship-level flow performance. Suitable for large landscape projects and aquaculture systems. Size 4 flagship model.',
+                images: ['images/water-pump-cover.jpg'],
+                params: {
+                    '型号': 'LY-16000', '电压': 'AC220-240V 50/60Hz', '功率': '120W', '扬程': '7.5米',
+                    '流量': '16000 L/H', '外观尺寸': '130×155×281mm', '尺寸类别': '第四尺寸（超大型）'
+                },
+                paramsEn: {
+                    'Model': 'LY-16000', 'Voltage': 'AC220-240V 50/60Hz', 'Power': '120W', 'Head': '7.5m',
+                    'Flow Rate': '16000 L/H', 'Dimensions': '130×155×281mm', 'Size Category': 'Size 4 (Extra Large)'
+                }
+            },
+            {
+                id: 13, category: 'pet-pump', categoryName: '宠物水泵', categoryNameEn: 'Pet Pump',
+                model: '宠物潜水泵', modelEn: 'Pet Submersible Pump',
+                name: 'DC5V 宠物饮水机水泵', nameEn: 'DC5V Pet Water Fountain Pump',
+                icon: 'fa-paw', theme: 'pet', moq: 500,
+                desc: '超静音微型潜水泵，专为宠物智能饮水机设计，DC 5V USB 安全供电，ABS 环保材质，防干烧保护。',
+                descEn: 'Ultra-quiet mini submersible pump. Designed for pet smart water fountains. DC 5V USB safe power supply. ABS eco-friendly material. Dry-burn protection.',
+                images: ['images/pet-pump-1.jpg', 'images/pet-pump-2.jpg'],
+                params: {
+                    '产品类别': '潜水泵', '适用电压': 'DC 5V', '功率': '2W', '流量': '160 L/H',
+                    '产品尺寸': '37×36×41mm', '产品材质': 'ABS', '扬程': '0.45m', '主要用途': '宠物饮水机、鱼缸造景、水族馆循环泵'
+                },
+                paramsEn: {
+                    'Category': 'Submersible Pump', 'Applicable Voltage': 'DC 5V', 'Power': '2W', 'Flow Rate': '160 L/H',
+                    'Dimensions': '37×36×41mm', 'Material': 'ABS', 'Head': '0.45m', 'Application': 'Pet fountain, aquarium landscaping, circulation pump'
+                }
+            }
+        ];
+
+        // ========== State ==========
+        let currentCategory = 'all';
+        let searchQuery = '';
+
+        // ========== DOM ==========
+        const productGrid = document.getElementById('productGrid');
+        const noResults = document.getElementById('noResults');
+        const searchInput = document.getElementById('searchInput');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalClose = document.getElementById('modalClose');
+        const inquiryBtn = document.getElementById('inquiryBtn');
+        const copyModelBtn = document.getElementById('copyModelBtn');
+        const sizeTableWrap = document.getElementById('sizeTableWrap');
+        const wechatCard = document.getElementById('wechatCard');
+        const qrModalOverlay = document.getElementById('qrModalOverlay');
+        const qrModalClose = document.getElementById('qrModalClose');
+        const langBtn = document.getElementById('langBtn');
+
+        // ========== Param key translation map ==========
+        const paramKeyMap = {
+            '型号': 'model', '功率': 'power', '流量': 'flow', '推荐缸体': 'tank_size', '电压': 'voltage',
+            '控制方式': 'control', '磁吸厚度': 'magnetic', '尺寸': 'dimensions', '扬程': 'head',
+            '外观尺寸': 'outer_size', '尺寸类别': 'size_category', '产品类别': 'category',
+            '适用电压': 'applicable_voltage', '产品材质': 'material', '主要用途': 'application',
+            'Model': 'model', 'Power': 'power', 'Flow Rate': 'flow', 'Tank Size': 'tank_size',
+            'Voltage': 'voltage', 'Control': 'control', 'Magnetic Thickness': 'magnetic',
+            'Dimensions': 'dimensions', 'Head': 'head', 'Size Category': 'size_category',
+            'Category': 'category', 'Applicable Voltage': 'applicable_voltage', 'Material': 'material',
+            'Application': 'application'
+        };
+
+        function translateParamKey(key) {
+            const mapKey = paramKeyMap[key];
+            return mapKey ? t(mapKey) : key;
+        }
+
+        // ========== Carousel Helpers ==========
+        function createCarouselHTML(images, theme, icon, categoryName, id, moq) {
+            if (!images || images.length === 0) {
+                return `<div class="product-image ${theme}"><span class="product-tag">${categoryName}</span><span class="moq-tag">${t('moq')}: ${moq}</span><i class="fas ${icon}"></i></div>`;
+            }
+            const slides = images.map(src => `<div class="carousel-slide"><img src="${src}" alt="product" loading="lazy"></div>`).join('');
+            const dots = images.map((_, i) => `<button class="carousel-dot ${i===0?'active':''}" data-index="${i}"></button>`).join('');
+            const hint = images.length > 1 ? t('hint_swipe') : t('hint_single');
+            return `
+                <div class="carousel" id="carousel-${id}" data-id="${id}">
+                    <span class="product-tag">${categoryName}</span>
+                    <span class="moq-tag">${t('moq')}: ${moq}</span>
+                    <div class="carousel-track" style="transform: translateX(0%)">${slides}</div>
+                    <div class="carousel-dots">${dots}</div>
+                    <div class="carousel-hint">${hint}</div>
+                </div>
+            `;
+        }
+
+        function initCarousel(element) {
+            const track = element.querySelector('.carousel-track');
+            const dots = element.querySelectorAll('.carousel-dot');
+            const id = parseInt(element.dataset.id);
+            const p = products.find(x => x.id === id);
+            const images = p ? p.images : [];
+            if (!images || images.length === 0) return;
+
+            let current = 0, startX = 0, isDragging = false;
+
+            function goTo(index) {
+                current = Math.max(0, Math.min(index, images.length - 1));
+                track.style.transform = `translateX(-${current * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            }
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(i); });
+            });
+
+            element.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isDragging = true; track.style.transition = 'none'; }, {passive: true});
+            element.addEventListener('touchmove', e => {
+                if (!isDragging) return;
+                const dx = e.touches[0].clientX - startX;
+                let percent = -(current * 100) + (dx / element.offsetWidth * 100);
+                if (images.length === 1) {
+                    const clamped = Math.max(-8, Math.min(8, (dx / element.offsetWidth * 100)));
+                    track.style.transform = `translateX(${clamped}%)`;
+                } else {
+                    if (current === 0 && dx > 0) percent *= 0.4;
+                    if (current === images.length - 1 && dx < 0) percent = -(current * 100) + (dx / element.offsetWidth * 100) * 0.4;
+                    track.style.transform = `translateX(${percent}%)`;
+                }
+            }, {passive: true});
+            element.addEventListener('touchend', e => {
+                if (!isDragging) return;
+                isDragging = false; track.style.transition = 'transform 0.3s ease';
+                const dx = e.changedTouches[0].clientX - startX;
+                const threshold = element.offsetWidth * 0.18;
+                if (images.length === 1) track.style.transform = 'translateX(0%)';
+                else if (dx < -threshold && current < images.length - 1) goTo(current + 1);
+                else if (dx > threshold && current > 0) goTo(current - 1);
+                else goTo(current);
+            });
+
+            element.addEventListener('mousedown', e => { startX = e.clientX; isDragging = true; track.style.transition = 'none'; });
+            element.addEventListener('mousemove', e => {
+                if (!isDragging) return;
+                const dx = e.clientX - startX;
+                if (images.length === 1) {
+                    const clamped = Math.max(-8, Math.min(8, (dx / element.offsetWidth * 100)));
+                    track.style.transform = `translateX(${clamped}%)`;
+                } else {
+                    let percent = -(current * 100) + (dx / element.offsetWidth * 100);
+                    if (current === 0 && dx > 0) percent *= 0.4;
+                    if (current === images.length - 1 && dx < 0) percent = -(current * 100) + (dx / element.offsetWidth * 100) * 0.4;
+                    track.style.transform = `translateX(${percent}%)`;
+                }
+            });
+            element.addEventListener('mouseup', e => {
+                if (!isDragging) return;
+                isDragging = false; track.style.transition = 'transform 0.3s ease';
+                const dx = e.clientX - startX;
+                const threshold = element.offsetWidth * 0.18;
+                if (images.length === 1) track.style.transform = 'translateX(0%)';
+                else if (dx < -threshold && current < images.length - 1) goTo(current + 1);
+                else if (dx > threshold && current > 0) goTo(current - 1);
+                else goTo(current);
+            });
+            element.addEventListener('mouseleave', () => {
+                if (isDragging) { isDragging = false; track.style.transition = 'transform 0.3s ease'; goTo(current); }
+            });
+        }
+
+        // ========== Modal Carousel ==========
+        let modalCarouselState = { current: 0, images: [] };
+        function initModalCarousel(images) {
+            const track = document.getElementById('modalCarouselTrack');
+            const dotsContainer = document.getElementById('modalCarouselDots');
+            const hint = document.getElementById('modalCarouselHint');
+            modalCarouselState.images = images || [];
+            modalCarouselState.current = 0;
+
+            if (!images || images.length === 0) {
+                track.innerHTML = ''; dotsContainer.innerHTML = ''; hint.style.display = 'none'; return;
+            }
+
+            track.innerHTML = images.map(src => `<div class="carousel-slide"><img src="${src}" alt="product"></div>`).join('');
+            dotsContainer.innerHTML = images.map((_, i) => `<button class="carousel-dot ${i===0?'active':''}" data-index="${i}"></button>`).join('');
+            hint.style.display = 'block';
+            hint.textContent = images.length > 1 ? t('hint_swipe') : t('hint_single');
+            track.style.transform = 'translateX(0%)';
+
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+            function goTo(index) {
+                modalCarouselState.current = Math.max(0, Math.min(index, images.length - 1));
+                track.style.transform = `translateX(-${modalCarouselState.current * 100}%)`;
+                dots.forEach((d, i) => d.classList.toggle('active', i === modalCarouselState.current));
+            }
+            dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+            const carouselEl = document.getElementById('modalCarousel');
+            let startX = 0, isDragging = false;
+            carouselEl.ontouchstart = e => { startX = e.touches[0].clientX; isDragging = true; track.style.transition = 'none'; };
+            carouselEl.ontouchmove = e => {
+                if (!isDragging) return;
+                const dx = e.touches[0].clientX - startX;
+                let percent = -(modalCarouselState.current * 100) + (dx / carouselEl.offsetWidth * 100);
+                if (images.length === 1) {
+                    const clamped = Math.max(-8, Math.min(8, (dx / carouselEl.offsetWidth * 100)));
+                    track.style.transform = `translateX(${clamped}%)`;
+                } else {
+                    if (modalCarouselState.current === 0 && dx > 0) percent *= 0.4;
+                    if (modalCarouselState.current === images.length - 1 && dx < 0) percent = -(modalCarouselState.current * 100) + (dx / carouselEl.offsetWidth * 100) * 0.4;
+                    track.style.transform = `translateX(${percent}%)`;
+                }
+            };
+            carouselEl.ontouchend = e => {
+                if (!isDragging) return;
+                isDragging = false; track.style.transition = 'transform 0.3s ease';
+                const dx = e.changedTouches[0].clientX - startX;
+                const threshold = carouselEl.offsetWidth * 0.18;
+                if (images.length === 1) track.style.transform = 'translateX(0%)';
+                else if (dx < -threshold && modalCarouselState.current < images.length - 1) goTo(modalCarouselState.current + 1);
+                else if (dx > threshold && modalCarouselState.current > 0) goTo(modalCarouselState.current - 1);
+                else goTo(modalCarouselState.current);
+            };
+        }
+
+        // ========== Render Products ==========
+        function renderProducts() {
+            const filtered = products.filter(p => {
+                const matchCategory = currentCategory === 'all' || p.category === currentCategory;
+                const q = searchQuery.toLowerCase();
+                const matchSearch = !q ||
+                    p.name.toLowerCase().includes(q) ||
+                    p.model.toLowerCase().includes(q) ||
+                    p.categoryName.toLowerCase().includes(q) ||
+                    (p.nameEn && p.nameEn.toLowerCase().includes(q)) ||
+                    (p.categoryNameEn && p.categoryNameEn.toLowerCase().includes(q));
+                return matchCategory && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                productGrid.style.display = 'none';
+                noResults.classList.add('show');
+                return;
+            }
+
+            productGrid.style.display = 'grid';
+            noResults.classList.remove('show');
+
+            productGrid.innerHTML = filtered.map(p => {
+                const sizeInfo = p.sizeKey ? sizeMap[p.sizeKey] : null;
+                const sizeHTML = sizeInfo ? `<div class="product-size-label" style="color:${sizeInfo.color};">${sizeInfo.size}</div>` : '';
+                const catName = lang === 'zh' ? p.categoryName : (p.categoryNameEn || p.categoryName);
+                const imageHTML = createCarouselHTML(p.images, p.theme, p.icon, catName, p.id, p.moq);
+                const displayName = lang === 'zh' ? p.name : (p.nameEn || p.name);
+                const displayDesc = lang === 'zh' ? p.desc : (p.descEn || p.desc);
+                const paramEntries = lang === 'zh' ? Object.entries(p.params) : Object.entries(p.paramsEn || p.params);
+                return `
+                <div class="product-card" onclick="openModal(${p.id})">
+                    ${imageHTML}
+                    <div class="product-body">
+                        <div class="product-model">${p.model}</div>
+                        <div class="product-name">${displayName}</div>
+                        ${sizeHTML}
+                        <div class="product-desc">${displayDesc}</div>
+                        <div class="product-params-preview">
+                            ${paramEntries.slice(0, 3).map(([k, v]) => `<span class="param-tag">${translateParamKey(k)}: ${v}</span>`).join('')}
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary" onclick="event.stopPropagation(); openModal(${p.id})">
+                                <i class="fas fa-eye"></i> ${t('btn_view')}
+                            </button>
+                            <a href="#contact" class="btn btn-outline" onclick="event.stopPropagation()">
+                                <i class="fas fa-comment-dollar"></i> ${t('inquiry')}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+
+            document.querySelectorAll('.carousel').forEach(el => initCarousel(el));
+        }
+
+        // ========== Open Modal ==========
+        function openModal(productId) {
+            const p = products.find(x => x.id === productId);
+            if (!p) return;
+
+            document.getElementById('modalHeader').className = 'modal-header ' + (p.images && p.images.length > 0 ? '' : p.theme);
+            initModalCarousel(p.images);
+
+            document.getElementById('modalModel').textContent = (lang==='zh'?'型号：':'Model: ') + p.model;
+            document.getElementById('modalTitle').textContent = lang === 'zh' ? p.name : (p.nameEn || p.name);
+            document.getElementById('modalDesc').textContent = lang === 'zh' ? p.desc : (p.descEn || p.desc);
+
+            const sizeEl = document.getElementById('modalSize');
+            if (p.sizeKey && sizeMap[p.sizeKey]) {
+                const s = sizeMap[p.sizeKey];
+                sizeEl.innerHTML = `<span style="display:inline-block;padding:4px 12px;border-radius:8px;background:${s.bg};color:${s.color};font-weight:700;">${s.label} · ${s.size}</span>`;
+                sizeEl.style.display = 'block';
+            } else {
+                sizeEl.style.display = 'none';
+            }
+
+            const paramEntries = lang === 'zh' ? Object.entries(p.params) : Object.entries(p.paramsEn || p.params);
+            const tbody = document.getElementById('modalParams');
+            tbody.innerHTML = paramEntries.map(([k, v]) => {
+                let valueHtml = v;
+                if (p.category === 'water-pump' && (k === '外观尺寸' || k === 'Dimensions') && p.sizeKey) {
+                    const s = sizeMap[p.sizeKey];
+                    valueHtml = `<span style="color:${s.color};font-weight:700;">${v}</span>`;
+                }
+                return `<tr><th>${translateParamKey(k)}</th><td>${valueHtml}</td></tr>`;
+            }).join('') + `<tr><th>${t('moq_label')}</th><td style="color:#e65100;font-weight:700;">${p.moq} ${lang==='zh'?'台':'pcs'}</td></tr>`;
+
+            inquiryBtn.onclick = function(e) {
+                e.preventDefault();
+                closeModal();
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            };
+
+            copyModelBtn.onclick = function() {
+                navigator.clipboard.writeText(p.model).then(() => {
+                    const original = copyModelBtn.innerHTML;
+                    copyModelBtn.innerHTML = '<i class="fas fa-check"></i> ' + t('copied');
+                    setTimeout(() => { copyModelBtn.innerHTML = original; }, 1500);
+                });
+            };
+
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ========== QR Modal ==========
+        wechatCard.addEventListener('click', () => {
+            qrModalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        qrModalClose.addEventListener('click', () => {
+            qrModalOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        qrModalOverlay.addEventListener('click', (e) => {
+            if (e.target === qrModalOverlay) { qrModalOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+        });
+
+        // ========== Language Switch ==========
+        langBtn.addEventListener('click', () => {
+            lang = lang === 'zh' ? 'en' : 'zh';
+            // Rebuild sizeMap labels
+            sizeMap['第一尺寸'].label = t('size_1_label');
+            sizeMap['第二尺寸'].label = t('size_2_label');
+            sizeMap['第三尺寸'].label = t('size_3_label');
+            sizeMap['第四尺寸'].label = t('size_4_label');
+            updateStaticText();
+            renderProducts();
+        });
+
+        // ========== Tabs & Search ==========
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                sizeTableWrap.classList.toggle('show', currentCategory === 'water-pump');
+                renderProducts();
+            });
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            renderProducts();
+        });
+
+        modalClose.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+                if (qrModalOverlay.classList.contains('active')) {
+                    qrModalOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+
+        // ========== Init ==========
+        updateStaticText();
+        renderProducts();
+    </script>
+</body>
+</html>
