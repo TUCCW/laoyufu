@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="icon" href="images/logo.jpg">
 <meta name="description" content="中山市老渔夫电器有限公司 - 水族泵源头工厂。变频水泵/变频造浪泵/宠物水泵批发,出厂价直供,量大从优,支持OEM/ODM。">
 <title>中山市老渔夫电器有限公司 - 水族泵源头工厂 · 出厂价直供</title>
@@ -190,7 +190,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px}
 .pdf-card{background:linear-gradient(135deg,var(--amber-soft),#FFE9C7);border:1px solid #F3D9A8;border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;justify-content:center;gap:8px}
 .pdf-card h4{font-size:17px;font-weight:800;color:#7A4A06}
 .pdf-card p{font-size:13.5px;color:#8a6a3a}
-.pdf-card .btn{align-self:flex-start;margin-top:8px}
+.pdf-card .btn{align-self:flex-start}
+.pdf-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
 @media(max-width:760px){.soon-row{grid-template-columns:1fr}.ptool{flex-direction:column;align-items:stretch}.search{max-width:none}}
 
 /* ============ Why ============ */
@@ -302,6 +303,60 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px}
     *,*::before,*::after{animation:none!important;transition:none!important}
     html{scroll-behavior:auto}
     .rv{opacity:1;transform:none}
+}
+
+/* ============ Mobile polish ============ */
+.wrap{padding:0 clamp(16px,4.5vw,24px)}
+.sec-head h2{font-size:clamp(23px,5.6vw,30px)}
+.hero h1{font-size:clamp(28px,7.8vw,46px)}
+.hero-sub{font-size:clamp(14.5px,3.9vw,16.5px)}
+.tabs{scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tbl-scroll{-webkit-overflow-scrolling:touch}
+.hdr{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+.footer{padding-bottom:calc(20px + env(safe-area-inset-bottom))}
+@media(max-width:920px){
+    .hdr-actions{margin-left:auto}
+}
+@media(max-width:760px){
+    .ptool{flex-wrap:nowrap}
+    .tabs{width:100%;padding-bottom:6px}
+    .search input{font-size:16px}
+}
+@media(max-width:640px){
+    .sec{padding:52px 0}
+    .sec-head{margin-bottom:24px}
+    .p-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:16px}
+    .tbl-head{padding:13px 16px;font-size:14px}
+    table.tbl{font-size:13px;min-width:580px}
+    .tbl th,.tbl td{padding:10px 12px}
+    .ovl{padding:12px}
+    .m-box{border-radius:16px}
+    .m-price{width:100%;margin-bottom:2px}
+    .m-foot .btn{flex:1;padding:12px 10px;font-size:13.5px}
+    .qr-body{padding:30px 22px}
+    .hero{padding:46px 0 100px}
+    .tank{height:330px}
+    .hero-ctas{display:flex}
+    .hero-ctas .btn{flex:1;justify-content:center;padding-left:14px;padding-right:14px}
+    .steps{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+    .soon-card,.pdf-card{padding:20px}
+    .why-card{padding:22px 20px}
+    .faq-q{padding:15px 16px;font-size:14.5px}
+    .qr-card{padding:26px 20px}
+    .ct-item .ct-value{font-size:15px}
+}
+@media(max-width:560px){
+    .hdr-logo small{display:none}
+    .hdr-logo b{font-size:14.5px}
+    .hdr-in{gap:10px}
+    .hdr-actions{gap:8px}
+    .lang span{padding:6px 10px}
+}
+@media(max-width:400px){
+    .hero-eyebrow{font-size:11px;letter-spacing:1.2px;padding:6px 12px}
+    .chip{padding:7px 12px;font-size:12.5px}
+    .hero-ctas .btn{font-size:14.5px}
 }
 </style>
 <script type="module" src="lib/model-viewer.min.js"></script>
@@ -510,10 +565,16 @@ table.tbl{width:100%;border-collapse:collapse;font-size:14px}
             <div class="pdf-card rv">
                 <h4 data-i18n="pdf_title">产品完整目录 (PDF)</h4>
                 <p data-i18n="pdf_sub">下载 PDF 查看全部型号参数与批发价</p>
-                <a href="products-catalog.pdf" download class="btn btn-amber">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 5-5m-5 5-5-5"/><path d="M4 21h16"/></svg>
-                    <span data-i18n="pdf_btn">下载产品目录 PDF</span>
-                </a>
+                <div class="pdf-btns">
+                    <a href="products-catalog-mobile.pdf" download class="btn btn-amber">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                        <span data-i18n="pdf_btn_m">手机竖屏版目录</span>
+                    </a>
+                    <a href="products-catalog.pdf" download class="btn btn-line">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 5-5m-5 5-5-5"/><path d="M4 21h16"/></svg>
+                        <span data-i18n="pdf_btn">A4 打印版目录</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -760,7 +821,8 @@ const I18N = {
     not_yet:{zh:'敬请期待',en:'Stay tuned'},
     pdf_title:{zh:'产品完整目录 (PDF)',en:'Full Catalog (PDF)'},
     pdf_sub:{zh:'下载 PDF 查看全部型号参数与批发价',en:'Download the PDF for all specs and wholesale prices'},
-    pdf_btn:{zh:'下载产品目录 PDF',en:'Download Catalog PDF'},
+    pdf_btn:{zh:'A4 打印版目录',en:'A4 Print Catalog'},
+    pdf_btn_m:{zh:'手机竖屏版目录',en:'Mobile Catalog (Portrait)'},
     eyebrow_why:{zh:'工厂直供 · WHY US',en:'WHY US · FACTORY DIRECT'},
     why_title:{zh:'工厂直供,价格实在',en:'Factory-direct, honest prices'},
     why_sub:{zh:'我们做的是低价走量的工厂生意:省掉中间环节,把价格做实在。',en:'We run a low-price, high-volume factory business: cut the middlemen, keep prices real.'},
